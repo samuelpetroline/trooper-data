@@ -1,0 +1,28 @@
+{
+  "name": "trooper-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "client": "cd client && npm start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuelpetroline/trooper-data.git"
+  },
+  "author": "Samuel Petroline",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samuelpetroline/trooper-data/issues"
+  },
+  "homepage": "https://github.com/samuelpetroline/trooper-data#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "concurrently": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}

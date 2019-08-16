@@ -1,10 +1,18 @@
 const express = require('express');
+const axios = require('axios');
+
+const config = require('./config.json');
+const routes = require('./routes/routes');
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = config.port || 5000;
 
-app.get('/api/mensagem', (req, res) => {
-  res.send({ express: 'Hello From Express' });
+const axiosInstance = axios.create({
+    baseURL: config.baseURL
 });
+
+global.axios = axiosInstance;
+
+app.use('/', routes);
 
 app.listen(port, () => console.log(`Listening on port ${port}`));

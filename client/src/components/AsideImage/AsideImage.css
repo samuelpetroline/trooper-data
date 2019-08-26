@@ -1,0 +1,28 @@
+.aside {
+    min-height: calc(100vh - 85px);
+    min-width: 550px;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('/assets/images/default-aside-image.jpg');
+    overflow: hidden;
+    position: relative;
+}
+
+.aside::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    background-size: cover;
+    transform-origin: center;
+    transition: transform .4s ease-in-out;
+}
+
+.aside:hover::after {
+    transform: scale(1.05);
+}

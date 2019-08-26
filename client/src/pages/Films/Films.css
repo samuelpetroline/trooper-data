@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+}
+
+.content {
+    padding: 3em;
+}
+
+.content .title {
+    display: flex;
+    align-items: baseline;
+}
+
+.content .title h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0
+}
+
+.content .title span {
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+.cards {
+    overflow: hidden;
+}
